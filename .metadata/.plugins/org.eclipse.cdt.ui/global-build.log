@@ -1,0 +1,67 @@
+17:28:00 **** Clean-only build of configuration Debug for project Distance_Measuring_System_Project ****
+make clean 
+rm -rf  ./Mini_Project_4.o ./gpio.o ./icu.o ./lcd.o ./ultrasonic.o  sizedummy  Mini_Project_4.lss  ./Mini_Project_4.d ./gpio.d ./icu.d ./lcd.d ./ultrasonic.d  Mini_Project_4.elf
+ 
+17:28:00 **** Build of configuration Debug for project Distance_Measuring_System_Project ****
+make all 
+Building file: ../distance_measuring_system_project.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"distance_measuring_system_project.d" -MT"distance_measuring_system_project.o" -c -o "distance_measuring_system_project.o" "../distance_measuring_system_project.c"
+Finished building: ../distance_measuring_system_project.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../icu.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"icu.d" -MT"icu.o" -c -o "icu.o" "../icu.c"
+../icu.c: In function 'Icu_setCallBack':
+../icu.c:82: warning: function return types not compatible due to 'volatile'
+Finished building: ../icu.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_sendCommand':
+../lcd.c:62: warning: unused variable 'lcd_port_value'
+../lcd.c: In function 'LCD_displayCharacter':
+../lcd.c:112: warning: unused variable 'lcd_port_value'
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:222: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../ultrasonic.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"ultrasonic.d" -MT"ultrasonic.o" -c -o "ultrasonic.o" "../ultrasonic.c"
+In file included from ../ultrasonic.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../ultrasonic.c
+ 
+Building target: Distance_Measuring_System_Project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Distance_Measuring_System_Project.map -mmcu=atmega16 -o "Distance_Measuring_System_Project.elf"  ./distance_measuring_system_project.o ./gpio.o ./icu.o ./lcd.o ./ultrasonic.o   
+Finished building target: Distance_Measuring_System_Project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Distance_Measuring_System_Project.elf  >"Distance_Measuring_System_Project.lss"
+Finished building: Distance_Measuring_System_Project.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Distance_Measuring_System_Project.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9448 bytes (57.7% Full)
+(.text + .data + .bootloader)
+
+Data:        287 bytes (28.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
